@@ -1,0 +1,10 @@
+services:
+  ammc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ammc:latest
+    container_name: ammc-demo
+    volumes:
+      - ./artifacts:/app/artifacts
+    command: ["python", "main.py"]
